@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  costumer: MyText
+  event: one
+  accepted: false
+  active: false
+
+two:
+  body: MyText
+  costumer: MyText
+  event: two
+  accepted: false
+  active: false
