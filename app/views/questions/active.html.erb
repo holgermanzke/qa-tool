@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Übersicht der Fragen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Costumer</th>
+      <th>Event</th>
+      <th>Accepted</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @questions.where(:active => true, :accepted => true).each do |question| %>
+
+    <tr>
+      <td><%= question.body %></td>
+      <td><%= question.costumer %></td>
+      <td><%= question.event.name %></td>
+      <td><%= question.accepted %></td>
+      <td><%= question.active %></td>
+      <td><%= link_to 'Show', question %></td>
+      <td><%= link_to 'Edit', edit_question_path(question) %></td>
+      <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %>

@@ -63,6 +63,12 @@ class QuestionsController < ApplicationController
     end
   end
 
+  # Show active questions
+  def active
+    @questions = Question.all
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question

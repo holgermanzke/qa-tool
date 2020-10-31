@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>QaTool</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>QaTool</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <nav>
+    <%= link_to "Frage stellen", new_question_path %>
+    <%= link_to "Alle Fragen", questions_path %>
+    <%= link_to "Teilnehmer Ansicht", "/overview" %>
     <%= yield %>
-  </body>
+</body>
+
 </html>
