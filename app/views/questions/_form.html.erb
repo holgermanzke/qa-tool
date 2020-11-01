@@ -26,6 +26,8 @@
   <%= form.collection_select(:event_id, @events, :id, :name) %>
 </div>
 
+<%
+=begin%>
 <div class="field">
   <%= form.label :accepted %>
   <%= form.check_box :accepted %>
@@ -35,6 +37,8 @@
   <%= form.label :active %>
   <%= form.check_box :active %>
 </div>
+<%
+=end%>
 
 <div class="actions">
   <%= form.submit %>
