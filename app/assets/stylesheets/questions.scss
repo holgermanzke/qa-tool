@@ -1,3 +1,33 @@
 // Place all the styles related to the Questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+.question-card {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 2px;
+}
+
+.question-body {
+  width: 50%;
+}
+
+.question-costumer {
+  width: 20%;
+}
+
+.question-accept {
+  width: 15%;
+}
+
+.question-destroy {
+  width: 15%;
+}

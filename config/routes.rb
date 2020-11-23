@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :questions
+   resources :questions do
+     member do
+       get :toggle_accepted_status
+       get :toggle_active_status
+     end
+   end
+
   resources :events
 
   get "overview", to: "questions#active"

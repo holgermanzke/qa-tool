@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_question, only: [:show, :edit, :update, :destroy, :toggle_accepted_status ]
 
   # GET /questions
   # GET /questions.json
@@ -61,6 +61,12 @@ class QuestionsController < ApplicationController
       format.html { redirect_to questions_url, notice: 'Question was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def toggle_accepted_status
+     @question.accepted = !@question.accepted
+     @question.save
+     redirect_to questions_url
   end
 
   # Show active questions
